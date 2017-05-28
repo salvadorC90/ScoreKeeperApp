@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
     /**
      * Increase the score for Red team by 1 point.
      */
@@ -81,8 +80,8 @@ public class MainActivity extends AppCompatActivity {
         demoBlueTeam = 0;
         displayForRedTeam(scoreRedTeam);
         displayForBlueTeam(scoreBlueTeam);
-        displayForRedTeam(demoRedTeam);
-        displayForBlueTeam(demoBlueTeam);
+        displayForRedTeamDemo(demoRedTeam);
+        displayForBlueTeamDemo(demoBlueTeam);
     }
 
     /**
@@ -92,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreView = (TextView) findViewById(R.id.red_team);
         scoreView.setText(String.valueOf(score));
     }
+
     /**
      * Displays the given score for Blue Team.
      */
@@ -99,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreView = (TextView) findViewById(R.id.blue_team);
         scoreView.setText(String.valueOf(score));
     }
+
     /**
      * Displays the given demos for Red Team.
      */
@@ -106,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreView = (TextView) findViewById(R.id.red_team_demo);
         scoreView.setText(String.valueOf(score));
     }
+
     /**
      * Displays the given demos for Blue Team.
      */
