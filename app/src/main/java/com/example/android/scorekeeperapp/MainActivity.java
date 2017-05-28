@@ -8,8 +8,10 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    int scoreTeamA = 0;
-    int scoreTeamB = 0;
+    int scoreRedTeam = 0;
+    int scoreBlueTeam = 0;
+    int demoRedTeam = 0;
+    int demoBlueTeam = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,77 +22,95 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * Increase the score for Team A by 1 point.
+     * Increase the score for Red team by 1 point.
      */
-    public void addOneForTeamA(View v) {
-        scoreTeamA = scoreTeamA + 1;
-        displayForTeamA(scoreTeamA);
+    public void addOneForRedTeam(View v) {
+        scoreRedTeam = scoreRedTeam + 1;
+        displayForRedTeam(scoreRedTeam);
 
     }
 
     /**
-     * Increase the score for Team A by 2 points.
+     * Increase the score for Red by 2 points.
      */
-    public void addTwoForTeamA(View v) {
-        scoreTeamA = scoreTeamA + 2;
-        displayForTeamA(scoreTeamA);
+    public void addTwoForRedTeam(View v) {
+        scoreRedTeam = scoreRedTeam + 2;
+        displayForRedTeam(scoreRedTeam);
 
     }
 
     /**
-     * Increase the score for Team A by 3 points.
+     * Increase the demos for Red team by 1 point.
      */
-    public void addThreeForTeamA(View v) {
-        scoreTeamA = scoreTeamA + 3;
-        displayForTeamA(scoreTeamA);
+    public void addDemoForRedTeam(View v) {
+        demoRedTeam = demoRedTeam + 1;
+        displayForRedTeamDemo(demoRedTeam);
 
     }
 
     /**
-     * Increase the score for Team B by 1 point.
+     * Increase the score for Blue Team by 1 point.
      */
-    public void addOneForTeamB(View v) {
-        scoreTeamB = scoreTeamB + 1;
-        displayForTeamB(scoreTeamB);
+    public void addOneForBlueTeam(View v) {
+        scoreBlueTeam = scoreBlueTeam + 1;
+        displayForBlueTeam(scoreBlueTeam);
 
     }
 
     /**
-     * Increase the score for Team B by 2 points.
+     * Increase the score for Blue Team by 2 points.
      */
-    public void addTwoForTeamB(View v) {
-        scoreTeamB = scoreTeamB + 2;
-        displayForTeamB(scoreTeamB);
+    public void addTwoForBlueTeam(View v) {
+        scoreBlueTeam = scoreBlueTeam + 2;
+        displayForBlueTeam(scoreBlueTeam);
 
     }
 
     /**
-     * Increase the score for Team B by 3 points.
+     * Increase the demos for Blue Team by 1 point.
      */
-    public void addThreeForTeamB(View v) {
-        scoreTeamB = scoreTeamB + 3;
-        displayForTeamB(scoreTeamB);
+    public void addDemoForBlueTeam(View v) {
+        demoBlueTeam = demoBlueTeam + 1;
+        displayForBlueTeamDemo(demoBlueTeam);
     }
 
     public void clearCounter(View v) {
-        scoreTeamA = 0;
-        scoreTeamB = 0;
-        displayForTeamA(scoreTeamA);
-        displayForTeamB(scoreTeamB);
+        scoreRedTeam = 0;
+        scoreBlueTeam = 0;
+        demoRedTeam = 0;
+        demoBlueTeam = 0;
+        displayForRedTeam(scoreRedTeam);
+        displayForBlueTeam(scoreBlueTeam);
+        displayForRedTeam(demoRedTeam);
+        displayForBlueTeam(demoBlueTeam);
     }
 
     /**
-     * Displays the given score for Team A.
+     * Displays the given score for Red Team.
      */
-    public void displayForTeamA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_a_score);
+    public void displayForRedTeam(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.red_team);
         scoreView.setText(String.valueOf(score));
     }
     /**
-     * Displays the given score for Team B.
+     * Displays the given score for Blue Team.
      */
-    public void displayForTeamB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
+    public void displayForBlueTeam(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.blue_team);
+        scoreView.setText(String.valueOf(score));
+    }
+    /**
+     * Displays the given demos for Red Team.
+     */
+    public void displayForRedTeamDemo(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.red_team_demo);
+        scoreView.setText(String.valueOf(score));
+    }
+    /**
+     * Displays the given demos for Blue Team.
+     */
+    public void displayForBlueTeamDemo(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.blue_team_demo);
         scoreView.setText(String.valueOf(score));
     }
 }

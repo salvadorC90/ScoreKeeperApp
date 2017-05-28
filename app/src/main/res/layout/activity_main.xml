@@ -10,9 +10,8 @@
             android:layout_height="wrap_content"
             android:text="Rocket League"
             android:textSize="30sp"
-            android:layout_margin="16dp"
+            android:layout_margin="8dp"
             android:layout_gravity="center_horizontal"/>
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,40 +31,61 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="16dp"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textColor="#616161"
                 android:fontFamily="sans-serif-medium"
                 android:text="Red Team" />
 
             <TextView
-                android:id="@+id/team_a_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Score"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/red_team"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:paddingBottom="24dp"
                 android:textSize="56sp"
                 android:textColor="#000000"
                 android:fontFamily="sans-serif-light"
                 android:text="0" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Demolitions"
+                android:gravity="center" />
+            <TextView
+                android:id="@+id/red_team_demo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:paddingBottom="16dp"
+                android:paddingTop="8dp"/>
+
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:onClick="addThreeForTeamA"
+                android:onClick="addOneForRedTeam"
                 android:text="+1 Goal" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:onClick="addTwoForTeamA"
+                android:onClick="addTwoForRedTeam"
                 android:text="+2 Aerial" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="addOneForTeamA"
+                android:onClick="addDemoForRedTeam"
                 android:text="Demolition" />
         </LinearLayout>
 
@@ -89,52 +109,79 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textSize="14sp"
                 android:padding="16dp"
+                android:textSize="16sp"
                 android:textColor="#616161"
                 android:fontFamily="sans-serif-medium"
                 android:text="Blue Team" />
 
             <TextView
-                android:id="@+id/team_b_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Score"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/blue_team"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:paddingBottom="24dp"
                 android:textSize="56sp"
                 android:textColor="#000000"
                 android:fontFamily="sans-serif-light"
                 android:text="0" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Demolitions"
+                android:gravity="center" />
+            <TextView
+                android:id="@+id/blue_team_demo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:paddingBottom="16dp"
+                android:paddingTop="8dp"/>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:onClick="addThreeForTeamB"
+                android:onClick="addOneForBlueTeam"
                 android:text="+1 Goal" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:onClick="addTwoForTeamB"
+                android:onClick="addTwoForBlueTeam"
                 android:text="+2 Aerial" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:onClick="addOneForTeamB"
+                android:onClick="addDemoForBlueTeam"
                 android:text="Demolition" />
         </LinearLayout>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </LinearLayout>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="reset"
             android:textAllCaps="true"
             android:layout_gravity="center"
-            android:onClick="clearCounter"/>
+            android:onClick="clearCounter"
+            android:layout_marginBottom="16dp"/>
 
 </LinearLayout>
